@@ -1,0 +1,17 @@
+{
+    "cluster": "QA",
+    "serviceName": "QA",
+    "taskDefinition": "QA:%TASKD%",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:684311504653:targetgroup/pulseid-green/4d7c7e98184b75d8",
+            "containerName": "QA",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 0
+    }
+}
